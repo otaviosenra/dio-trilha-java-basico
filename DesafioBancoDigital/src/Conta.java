@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Conta implements IConta {
 	
@@ -8,6 +10,7 @@ public abstract class Conta implements IConta {
 	protected int numero;
 	protected double saldo;
 	protected Cliente cliente;
+	protected List<Emprestimo> emprestimos;
 
 	public Conta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO;
@@ -31,6 +34,14 @@ public abstract class Conta implements IConta {
 		contaDestino.depositar(valor);
 	}
 
+	public List<Emprestimo> getEmprestimos() {
+		return emprestimos;
+	}
+
+	public void setEmprestimos(List<Emprestimo> emprestimos) {
+		this.emprestimos = emprestimos;
+	}
+
 	public int getAgencia() {
 		return agencia;
 	}
@@ -49,4 +60,11 @@ public abstract class Conta implements IConta {
 		System.out.println(String.format("Numero: %d", this.numero));
 		System.out.println(String.format("Saldo: %.2f", this.saldo));
 	}
+
+	public void adicionarEmprestimo(Emprestimo emprestimo) {
+        if (emprestimos == null) {
+            emprestimos = new ArrayList<>();
+        }
+        emprestimos.add(emprestimo);
+    }
 }

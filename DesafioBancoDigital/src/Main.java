@@ -11,5 +11,10 @@ public class Main {
 		
 		cc.imprimirExtrato();
 		poupanca.imprimirExtrato();
+
+		Emprestimo.simularEmprestimo(1000, 12);
+        Emprestimo.realizarEmprestimo(cc, 1000, 12);
+
+		cc.imprimirExtrato();
     }
 }
