@@ -32,5 +32,6 @@ public class SudokuPlayer {
         }
         System.out.println("Tabuleiro completo!");
         board.printBoard();
+        scanner.close();
     }
 }
