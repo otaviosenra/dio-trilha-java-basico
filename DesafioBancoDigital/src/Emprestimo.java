@@ -4,9 +4,13 @@ public class Emprestimo {
     private static final double TAXA_JUROS = 0.05;
     private static final DecimalFormat FORMATADOR = new DecimalFormat("#0.00");
 
+    @SuppressWarnings("unused")
     private double valor;
+    @SuppressWarnings("unused")
     private int parcelas;
+    @SuppressWarnings("unused")
     private Conta conta;
+    @SuppressWarnings("unused")
     private double juros;
 
     public Emprestimo(Conta conta, double valor, int parcelas) {
