@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "ProjetoSudoku/src",
+        "DesafioBancoDigital/src",
+        "rest-api/src/main/java/dio/rest_api"
+    ]
+}
