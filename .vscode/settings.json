@@ -3,5 +3,6 @@
         "ProjetoSudoku/src",
         "DesafioBancoDigital/src",
         "rest-api/src/main/java/dio/rest_api"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "disabled"
 }
