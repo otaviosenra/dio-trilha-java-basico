@@ -18,7 +18,7 @@ import dio.rest_api.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping("/usuarios")
-@PreAuthorize("hasRole('ADMIN')")
+// @PreAuthorize("hasRole('ADMIN')") // ISSO DEFINE QUE ESTE CONTROLLER SÓ SERA ACESSIVEL AOS USUARIOS DE ROLE ADMIN
 public class UsuarioController {
     @Autowired
     private UsuarioRepository repository;

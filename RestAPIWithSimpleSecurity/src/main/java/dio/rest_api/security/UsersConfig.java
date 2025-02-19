@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 
-// ESTAS CONFIGURAÇÕES SERVEM PARA DEFINIR UM USUARIO E SENHA LOGAVEL PARA ACESSAR A API
+// ESTAS CONFIGURAÇÕES SERVEM PARA DEFINIR UM USUARIO E SENHA EM MEMÓRIA PARA ACESSAR A API
 
 @Configuration
 public class UsersConfig {
