@@ -1,8 +1,9 @@
 {
     "java.project.sourcePaths": [
+        "rest-api/src/main/java/dio/rest_api",
         "ProjetoSudoku/src",
         "DesafioBancoDigital/src",
-        "rest-api/src/main/java/dio/rest_api"
+        "JWTProjectExample/src/main/java/dio/JWTProjectExample"
     ],
     "java.configuration.updateBuildConfiguration": "disabled"
 }
