@@ -20,6 +20,7 @@ public class WebSecurityConfig {
     private static final String[] SWAGGER_WHITELIST = {
             "/v2/api-docs",
             "/v3/api-docs",
+            "/docs#",
             "/swagger-resources",
             "/swagger-resources/**",
             "/configuration/ui",
@@ -37,7 +38,7 @@ public class WebSecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // JWT não usa sessão
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(SWAGGER_WHITELIST).permitAll() // Libera Swagger
-                .requestMatchers("/h2-console/**").permitAll() // Libera H2-Console
+                // .requestMatchers("/h2-console/**").permitAll() // Libera H2-Console
                 .requestMatchers(HttpMethod.POST, "/login").permitAll() // Libera login
                 .requestMatchers(HttpMethod.POST, "/users").permitAll() // Cadastro de usuário público
                 .requestMatchers(HttpMethod.GET, "/users").hasAnyRole("USERS", "MANAGERS") // Protege endpoint users
