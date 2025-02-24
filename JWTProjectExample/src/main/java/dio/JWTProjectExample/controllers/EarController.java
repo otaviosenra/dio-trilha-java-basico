@@ -5,15 +5,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class EarController {
-@GetMapping
+
+    @GetMapping("/welcome")
     public String welcome(){
         return "Welcome to My Spring Boot Web API";
     }
-    @GetMapping("/users")
+    @GetMapping("/test-user-auth")
     public String users() {
         return "Authorized user";
     }
-    @GetMapping("/managers")
+    @GetMapping("/test-managers-auth")
     public String managers() {
         return "Authorized manager";
     }

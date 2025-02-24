@@ -8,7 +8,7 @@ import dio.JWTProjectExample.models.Users;
 
 public interface UserRepository extends JpaRepository<Users, Long> {
 
-    @Query("SELECT u FROM Users u JOIN FETCH roles WHERE username = (:username)")
+    @Query("SELECT u FROM Users u WHERE u.username = :username")
     public Users findByUsername(@Param("username") String username);
 
     boolean existsByUsername(String username);
